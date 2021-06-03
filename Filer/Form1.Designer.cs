@@ -41,6 +41,10 @@ namespace Filer
             this.changeFont = new System.Windows.Forms.Button();
             this.SavePrefs = new System.Windows.Forms.Button();
             this.Registry = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SearchBy = new System.Windows.Forms.Button();
+            this.Books = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -52,7 +56,7 @@ namespace Filer
             // 
             // getBack
             // 
-            this.getBack.Location = new System.Drawing.Point(26, 58);
+            this.getBack.Location = new System.Drawing.Point(26, 104);
             this.getBack.Name = "getBack";
             this.getBack.Size = new System.Drawing.Size(34, 23);
             this.getBack.TabIndex = 2;
@@ -64,9 +68,9 @@ namespace Filer
             // 
             this.listView1.ContextMenuStrip = this.ContextMenuStrip;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(26, 86);
+            this.listView1.Location = new System.Drawing.Point(26, 133);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(566, 226);
+            this.listView1.Size = new System.Drawing.Size(650, 226);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -82,7 +86,7 @@ namespace Filer
             // 
             // toDisks
             // 
-            this.toDisks.Location = new System.Drawing.Point(515, 29);
+            this.toDisks.Location = new System.Drawing.Point(273, 58);
             this.toDisks.Name = "toDisks";
             this.toDisks.Size = new System.Drawing.Size(75, 41);
             this.toDisks.TabIndex = 4;
@@ -92,7 +96,7 @@ namespace Filer
             // 
             // changeColour
             // 
-            this.changeColour.Location = new System.Drawing.Point(434, 28);
+            this.changeColour.Location = new System.Drawing.Point(192, 58);
             this.changeColour.Name = "changeColour";
             this.changeColour.Size = new System.Drawing.Size(75, 41);
             this.changeColour.TabIndex = 5;
@@ -102,7 +106,7 @@ namespace Filer
             // 
             // changeFont
             // 
-            this.changeFont.Location = new System.Drawing.Point(353, 29);
+            this.changeFont.Location = new System.Drawing.Point(111, 58);
             this.changeFont.Name = "changeFont";
             this.changeFont.Size = new System.Drawing.Size(75, 41);
             this.changeFont.TabIndex = 6;
@@ -112,7 +116,7 @@ namespace Filer
             // 
             // SavePrefs
             // 
-            this.SavePrefs.Location = new System.Drawing.Point(66, 58);
+            this.SavePrefs.Location = new System.Drawing.Point(66, 104);
             this.SavePrefs.Name = "SavePrefs";
             this.SavePrefs.Size = new System.Drawing.Size(75, 23);
             this.SavePrefs.TabIndex = 7;
@@ -122,7 +126,7 @@ namespace Filer
             // 
             // Registry
             // 
-            this.Registry.Location = new System.Drawing.Point(268, 29);
+            this.Registry.Location = new System.Drawing.Point(26, 58);
             this.Registry.Name = "Registry";
             this.Registry.Size = new System.Drawing.Size(79, 40);
             this.Registry.TabIndex = 8;
@@ -130,11 +134,50 @@ namespace Filer
             this.Registry.UseVisualStyleBackColor = true;
             this.Registry.Click += new System.EventHandler(this.Registry_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(576, 75);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 9;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(441, 75);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 10;
+            // 
+            // SearchBy
+            // 
+            this.SearchBy.Location = new System.Drawing.Point(576, 104);
+            this.SearchBy.Name = "SearchBy";
+            this.SearchBy.Size = new System.Drawing.Size(100, 23);
+            this.SearchBy.TabIndex = 11;
+            this.SearchBy.Text = "Поиск";
+            this.SearchBy.UseVisualStyleBackColor = true;
+            this.SearchBy.Click += new System.EventHandler(this.SearchBy_Click);
+            // 
+            // Books
+            // 
+            this.Books.Location = new System.Drawing.Point(354, 58);
+            this.Books.Name = "Books";
+            this.Books.Size = new System.Drawing.Size(75, 41);
+            this.Books.TabIndex = 12;
+            this.Books.Text = "Книги";
+            this.Books.UseVisualStyleBackColor = true;
+            this.Books.Click += new System.EventHandler(this.Books_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 331);
+            this.ClientSize = new System.Drawing.Size(699, 409);
+            this.Controls.Add(this.Books);
+            this.Controls.Add(this.SearchBy);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Registry);
             this.Controls.Add(this.SavePrefs);
             this.Controls.Add(this.changeFont);
@@ -165,6 +208,10 @@ namespace Filer
         private System.Windows.Forms.Button changeFont;
         private System.Windows.Forms.Button SavePrefs;
         private System.Windows.Forms.Button Registry;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button SearchBy;
+        private System.Windows.Forms.Button Books;
     }
 }
 

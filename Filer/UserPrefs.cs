@@ -31,14 +31,14 @@ namespace Filer
         {
 
         }
-        public void SavePrefs()
+        public void SavePrefs() //Сохранение настроек
         {
             BinaryFormatter binformat = new BinaryFormatter();
             Stream fStream = new FileStream("pref.dat", FileMode.Create, FileAccess.Write, FileShare.None);
-            binformat.Serialize(fStream, this);
+            binformat.Serialize(fStream, this); //Запуск сериализации
             fStream.Close();
         }
-        public static UserPrefs Get()
+        public static UserPrefs Get() //Получение настроек 
         {
             UserPrefs prefs = new UserPrefs();
             if (File.Exists("pref.dat"))
@@ -61,7 +61,7 @@ namespace Filer
         {
             if (password!=null) password = Decrypt(password);
         }
-        static public byte[] Encrypt(object password)
+        static public byte[] Encrypt(object password) //Шифрование пароля
         {
             string pass = password as string;
             byte[] encrypted;
@@ -85,7 +85,7 @@ namespace Filer
             return encrypted;
         }
 
-        static public string Decrypt(object password)
+        static public string Decrypt(object password) //Расшифровка пароля 
         {
             byte[] pass = password as byte[];
             string plaintext = null;
